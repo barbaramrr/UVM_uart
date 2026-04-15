@@ -1,0 +1,1 @@
+"testbench" -relax -s "work.testbench" -L "uvm" -L "work" -debug "typical" -timescale "1ns/100ps" -log "elaborate.log" 

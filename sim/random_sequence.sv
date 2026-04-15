@@ -26,6 +26,8 @@ class random_sequence extends uvm_sequence #(uart_item);
             end
             item_count++;
             `uvm_info(get_full_name(), $sformatf("Sequence item %d: Generated random data: 0x%02h", item_count, seq_item.data), UVM_MEDIUM)
+             uvm_config_db#(bit [4:0])::set(null, "*", "CURRENT_BAUD", seq_item.baud);
+             `uvm_info(get_full_name(), $sformatf("Sequence item %d: Generated random baud: 0x%02d", item_count, seq_item.baud), UVM_MEDIUM)
             finish_item(seq_item); 
         end
     endtask : body

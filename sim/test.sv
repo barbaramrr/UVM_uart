@@ -26,14 +26,17 @@ class uart_test extends uvm_test;
     task run_phase(uvm_phase phase);
         random_sequence rx_rnd_seq;
         random_sequence tx_rnd_seq;
+        baud_rate_sequence seq;
         phase.raise_objection(this);
         rx_rnd_seq = random_sequence::type_id::create("rx_rnd_seq");
         tx_rnd_seq = random_sequence::type_id::create("tx_rnd_seq");
+        seq = baud_rate_sequence::type_id::create("seq");
         `uvm_info(get_full_name(), "Starting RANDOM SEQUENCE on RX sequencer...", UVM_LOW)
         `uvm_info(get_full_name(), "Starting RANDOM SEQUENCE on TX sequencer...", UVM_LOW)
         fork
             rx_rnd_seq.start(uart_env.rx_ag.rx_sqr);
             tx_rnd_seq.start(uart_env.tx_ag.tx_sqr);
+            seq.start(uart_env.tx_ag.tx_sqr);
         join
         // Prevent the test from ending until all transactions have been processed by the scoreboard
         wait (uart_env.rx_scb.match_count + uart_env.rx_scb.mismatch_count == rx_rnd_seq.item_count);

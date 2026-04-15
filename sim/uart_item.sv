@@ -10,7 +10,7 @@ class uart_item extends uvm_sequence_item;
 
 
     rand bit [7:0] data;
-   rand uart_baud_rate_t baud;
+    rand uart_baud_rate_t baud;
     // 
 
     function new(string name = "uart_item");

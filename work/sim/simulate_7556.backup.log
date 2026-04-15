@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Apr 15 15:58:03 2026
+# Process ID         : 7556
+# Current directory  : C:/Users/PC/Documents/UVM_uart/work/sim
+# Command line       : xsim.exe -log simulate.log -mode tcl -source {xsim.dir/work.testbench/xsim_script.tcl}
+# Log file           : C:/Users/PC/Documents/UVM_uart/work/sim/simulate.log
+# Journal file       : C:/Users/PC/Documents/UVM_uart/work/sim\xsim.jou
+# Running On         : DESKTOP-PGLBIGS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+# CPU Frequency      : 2394 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17103 MB
+# Swap memory        : 2097 MB
+# Total Virtual      : 19200 MB
+# Available Virtual  : 10537 MB
+#-----------------------------------------------------------
+source xsim.dir/work.testbench/xsim_script.tcl
+# xsim {work.testbench} -testplusarg UVM_TESTNAME=baud_rate_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -testplusarg seed=1 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_WARNING @ 0: reporter [BDTYP] Cannot create a component of type 'baud_rate_test' because it is not registered with the factory.
+UVM_FATAL @ 0: reporter [INVTST] Requested test from command line +UVM_TESTNAME=baud_rate_test not found.
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    2
+UVM_WARNING :    1
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[BDTYP]     1
+[INVTST]     1
+[NO_DPI_TSTNAME]     1
+[UVM/RELNOTES]     1
+
+WARNING: The Functional Coverage Database has not been updated during simulation. Please recheck testbench to confirm that covergroups are being instantiated correctly and rerun simulation.
+$finish called at time : 0 fs : File "C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18538
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Apr 15 15:58:06 2026...

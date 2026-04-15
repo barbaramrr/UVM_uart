@@ -4,6 +4,7 @@
 
 import uvm_pkg::*;
 `include "uvm_macros.svh"
+`include "uart_item.sv"
 
 class baud_rate_sequence extends uvm_sequence #(uart_item);
     `uvm_object_utils(baud_rate_sequence) 

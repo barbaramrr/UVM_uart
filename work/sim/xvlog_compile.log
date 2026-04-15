@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/baud_rate_type.svh" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/clock_div.sv" into library work
+INFO: [VRFC 10-311] analyzing module clock_div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/reg_bank.sv" into library work
+INFO: [VRFC 10-311] analyzing module reg_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/rx_uart.sv" into library work
+INFO: [VRFC 10-311] analyzing module rx_uart
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/tx_uart.sv" into library work
+INFO: [VRFC 10-311] analyzing module tx_uart
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/rtl/uart_controller.sv" into library work
+INFO: [VRFC 10-311] analyzing module uart_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/sim/uart_bfm.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/sim/reg_if_bfm.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/PC/Documents/UVM_uart/sim/test.sv" into library work
+ERROR: [VRFC 10-2989] 'baud_rate_sequence' is not declared [C:/Users/PC/Documents/UVM_uart/sim/test.sv:33]

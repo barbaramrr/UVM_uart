@@ -17,7 +17,7 @@
 # ===================== UVM controls =========================
 # Comment these 2 lines to allow changing parameter in runtime
 set SCRIPT_TARGET   "all"
-set GUI_MODE        "no-gui"
+set GUI_MODE        "gui"
 
 # UVM controls
 set UVM_TEST        "uart_test"
@@ -48,6 +48,7 @@ set XVHDL_TB_FILES  [list ]
 set XVLOG_TB_FILES  [list "$TB_PATHS/uart_bfm.sv" \
                           "$TB_PATHS/reg_if_bfm.sv" \
                           "$TB_PATHS/test.sv" \
+			  "$TB_PATHS/scoreboard.sv" \
                           "$TB_PATHS/testbench.sv" ]
 
 # Name of the top level simulation module 
