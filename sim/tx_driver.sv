@@ -23,7 +23,6 @@ class tx_driver extends uvm_driver #(uart_item);
 
     task run_phase(uvm_phase phase);
         uart_item command;
-       
     
         fork
             bfm_reg0.generate_clock(100_000_000, 0, 0);
@@ -31,17 +30,19 @@ class tx_driver extends uvm_driver #(uart_item);
             bfm_reg0.monitor_csr();
         join_any
 
-        bfm_reg0.configure_csr(0, 0, 0, 0, 3'd7, command.baud);
-        bfm_reg0.get_csr();
-
         forever begin
             seq_item_port.get_next_item(command);
+             //alterações:
+            bfm_reg0.configure_csr(0, 0, 0, 0, 3'd7, command.baud); // Configura o CSR com o baud code do comando
+            bfm_reg0.get_csr();
+            // inclusão do configure e do get_csr no forever para garantir que o baud rate seja atualizado a cada item processado
+             `uvm_info(get_full_name(), $sformatf("Aplicando Baud : %0d no Hardware e enviando Data: 0x%h", 
+                        command.baud, command.data), UVM_MEDIUM)
             bfm_reg0.uart_send(command.data);
             seq_item_port.item_done();
         end
     endtask : run_phase
 
-
 endclass : tx_driver
 
-`endif // RX_DRIVER_SV
+`endif // TX_DRIVER_SV
