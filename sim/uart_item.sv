@@ -10,8 +10,8 @@ class uart_item extends uvm_sequence_item;
     `uvm_object_utils(uart_item)
 
     rand bit [7:0] data;
-   // rand uart_baud_rate_t baud; // Usa o tipo de baud rate definido em baud_rate_type.sv
-    rand bit [4:0] baud; // Enumeração de baud rate (5 bits para representar até 32 valores)
+    rand uart_baud_rate_t baud; // Usa o tipo de baud rate definido em baud_rate_type.sv
+   // rand bit [4:0] baud; // Enumeração de baud rate (5 bits para representar até 32 valores)
 
     function new(string name = "uart_item");
         super.new(name);
